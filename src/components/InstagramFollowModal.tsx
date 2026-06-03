@@ -50,12 +50,12 @@ export function InstagramFollowModal({ onDismiss }: Props) {
           id="instagram-follow-title"
           className="mb-2 text-lg font-semibold text-gray-900"
         >
-          Instagram дагана уу
+          Instagram
         </h2>
         <p className="mb-6 text-sm text-gray-600">
-          Шинэ ном, мэдээллийг хамгийн түрүүнд авахын тулд{' '}
+          Ном уншихын тулд{' '}
           <span className="font-medium text-gray-900">@{INSTAGRAM_HANDLE}</span>{' '}
-          хуудсыг дагана уу.
+          хаяг дагана уу.
         </p>
 
         <button
