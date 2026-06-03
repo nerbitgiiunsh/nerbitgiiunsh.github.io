@@ -7,9 +7,15 @@ import {
 } from '../lib/bookPath'
 import { waitAndOpenDearflipPdf } from '../lib/openDearflipPdf'
 
+type Props = {
+  enabled: boolean
+}
+
 /** URL path → DearFlip lightbox (a.html-тай ижил) */
-export function FlipbookReader() {
+export function FlipbookReader({ enabled }: Props) {
   useEffect(() => {
+    if (!enabled) return
+
     let cleanup: (() => void) | undefined
 
     const openFromPath = () => {
@@ -35,7 +41,7 @@ export function FlipbookReader() {
       window.removeEventListener('popstate', openFromPath)
       cleanup?.()
     }
-  }, [])
+  }, [enabled])
 
   return null
 }
