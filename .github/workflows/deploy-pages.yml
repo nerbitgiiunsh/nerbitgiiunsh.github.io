@@ -5,6 +5,7 @@ name: Deploy GitHub Pages
 on:
   push:
     branches: [main, master]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -31,6 +32,14 @@ jobs:
       - run: npm run build:pages
         env:
           GITHUB_ACTIONS: true
+
+      - name: Verify build output
+        run: |
+          test -f dist/index.html
+          test -f dist/404.html
+          test -f dist/books/1.pdf
+          grep -q '/assets/' dist/index.html
+          ! grep -q 'src/main.tsx' dist/index.html
 
       - uses: actions/upload-pages-artifact@v3
         with:
