@@ -26,7 +26,7 @@ function applyOpenOptions(api: DearFlipApi) {
   api.defaults.fakeZoom = 3
   api.openFileOptions = api.openFileOptions || {}
   api.openFileOptions.hasSpiral = false
-  api.openFileOptions.is3D = true
+  api.openFileOptions.is3D = false
   const dir = api.READ_DIRECTION ?? api.DIRECTION
   api.openFileOptions.direction = dir?.LTR ?? 1
 }
