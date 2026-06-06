@@ -4,3 +4,13 @@ body {
   margin: 0;
   background: #eee;
 }
+
+/* waust.at тоолуур — DearFlip lightbox-ийн дээгүүр, баруун дээд */
+#_waues1 + div {
+  position: fixed !important;
+  right: 12px !important;
+  top: 12px !important;
+  left: auto !important;
+  bottom: auto !important;
+  z-index: 2147483647 !important;
+}

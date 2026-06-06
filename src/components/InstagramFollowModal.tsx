@@ -46,16 +46,16 @@ export function InstagramFollowModal({ onDismiss }: Props) {
           </svg>
         </div>
 
-        <h2
+        {/* <h2
           id="instagram-follow-title"
           className="mb-2 text-lg font-semibold text-gray-900"
         >
           Instagram
-        </h2>
+        </h2> */}
         <p className="mb-6 text-sm text-gray-600">
-          Ном уншихын тулд{' '}
+          Манай {' '}
           <span className="font-medium text-gray-900">@{INSTAGRAM_HANDLE}</span>{' '}
-          хаяг дагана уу.
+          инстаграм хаягийг дагаснаар ном унших боломжтой🫶🏻.
         </p>
 
         <button
