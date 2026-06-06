@@ -10,7 +10,7 @@ function pathnameWithoutBase(pathname: string): string {
   return pathname
 }
 
-function lastPathSegment(pathname: string): string | null {
+export function lastPathSegment(pathname: string): string | null {
   const decoded = decodeURIComponent(pathnameWithoutBase(pathname)).replace(
     /\/+$/,
     '',
@@ -28,6 +28,10 @@ function slugFromSegment(segment: string): BookSlug | null {
     return null
   }
   return isBookSlug(candidate) ? candidate : null
+}
+
+export function pathnameLooksLikeBook(pathname: string): boolean {
+  return lastPathSegment(pathname) !== null
 }
 
 /** `/ebook/1`, `/ebook/1.pdf` → slug `1` */
